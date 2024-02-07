@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.7rem;
+}
+
+.navbar Link {
+    list-style-type: none;
+    padding: 0.8rem 7rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid transparent; 
+    box-sizing: border-box;
+}
+
+.navbar Link:hover {
+    border-bottom: 1px solid rgb(164, 164, 164);
+    color: rgb(86, 86, 149);
+}
+
