@@ -6,8 +6,12 @@ import data from '../locales/en.json';
 import LanguageSwitcher from './LanguageSwitcher';
 import NavigationMain from './NavigationMain';
 import MainPageSection from './MainPageSection';
+import Trendings from './Trendings';
+import ProductList from './ProductList';
 
-function HeaderMain() {
+
+
+function HeaderMain(productsData) {
     const [searchTerm, setSearchTerm] = useState('');
     const [showResults, setShowResults] = useState(false);
 
@@ -61,8 +65,10 @@ function HeaderMain() {
                         </div>
                         ))}
                 </div>
-                < NavigationMain />
+                <NavigationMain />
                 <MainPageSection />
+                <Trendings />
+
         </div>
     );
 }

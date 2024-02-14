@@ -11,6 +11,7 @@ import BodySection from './components/BodySection';
 import SkinSection from './components/SkinSection';
 import MensSection from './components/MensSection';
 import MainPageSection from './components/MainPageSection';
+import BoxesSection from './components/BoxPageSection'
 
 function App() {
   const { t } = useTranslation();
@@ -24,6 +25,7 @@ function App() {
         <Route path="/hair" element={<HairSection />} />
         <Route path="/body" element={<BodySection />} />
         <Route path="/skin" element={<SkinSection />} />
+        <Route path="/box" element={<BoxesSection />} />
         <Route path="/main" element={<MainPageSection />} />
       </Routes>
     </Router>

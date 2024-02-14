@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 80px;
+
+}
+.box{
+    display: inline-block;
+}
+.box img{
+    width: 250px;
+}
