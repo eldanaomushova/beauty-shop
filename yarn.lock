@@ -7943,7 +7943,7 @@ react-refresh@^0.11.0:
 
 react-router-dom@^6.22.0:
   version "6.22.0"
-  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.22.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.22.0.tgz#177c8bd27146decbb991eafb5df159f7a9f70035"
   integrity sha512-z2w+M4tH5wlcLmH3BMMOMdrtrJ9T3oJJNsAlBJbwk+8Syxd5WFJ7J5dxMEW0/GEXD1BBis4uXRrNIz3mORr0ag==
   dependencies:
     "@remix-run/router" "1.15.0"
@@ -8013,7 +8013,7 @@ react-scripts@5.0.1:
 
 react-slideshow-image@^4.3.0:
   version "4.3.0"
-  resolved "https://registry.yarnpkg.com/react-slideshow-image/-/react-slideshow-image-4.3.0.tgz#6939fbd05a66addb55faddd4d736f64692e15a7d"
+  resolved "https://registry.npmjs.org/react-slideshow-image/-/react-slideshow-image-4.3.0.tgz"
   integrity sha512-SPiZtZRcBYAtin5Nva5ZgnLlMQHCcccBInkJ2Q8PEBBBMGhXZgSlAm+3VoMDjKUWYfNjTN3gEL6y+SrBzBeLXQ==
   dependencies:
     "@tweenjs/tween.js" "^18.6.4"

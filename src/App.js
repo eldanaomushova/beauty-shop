@@ -1,9 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './components/LanguageSwitcher';
 import HeaderMain from './components/HeaderMain';
-import NavigationMain from './components/NavigationMain';
 import ChildSection from './components/ChildSection'
 import HandSection from './components/HandSection';
 import HairSection from './components/HairSection';
@@ -12,6 +10,7 @@ import SkinSection from './components/SkinSection';
 import MensSection from './components/MensSection';
 import MainPageSection from './components/MainPageSection';
 import BoxesSection from './components/BoxPageSection'
+import LikedProductsSection from './components/LikeProductsSection';
 
 function App() {
   const { t } = useTranslation();
@@ -27,6 +26,7 @@ function App() {
         <Route path="/skin" element={<SkinSection />} />
         <Route path="/box" element={<BoxesSection />} />
         <Route path="/main" element={<MainPageSection />} />
+        <Route path="/liked" element={<LikedProductsSection />} />
       </Routes>
     </Router>
   );

@@ -7,8 +7,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import NavigationMain from './NavigationMain';
 import MainPageSection from './MainPageSection';
 import Trendings from './Trendings';
-import ProductList from './ProductList';
-
+import Footer from './Footer';
 
 
 function HeaderMain(productsData) {
@@ -68,6 +67,7 @@ function HeaderMain(productsData) {
                 <NavigationMain />
                 <MainPageSection />
                 <Trendings />
+                <Footer />
 
         </div>
     );
