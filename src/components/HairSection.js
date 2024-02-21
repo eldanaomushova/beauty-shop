@@ -23,6 +23,8 @@ const HairSection = () => {
 
     return (
         <div className='products-container'>
+            {/* <HeaderMain/>
+            <NavigationMain/> */}
             {Hair.map((record) => (
                 <div className='box' key={record.id}>
                     <img src={require(`../images/for hair/${record.image}.jpg`)} alt={record.name} />

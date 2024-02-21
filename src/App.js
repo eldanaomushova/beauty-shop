@@ -3,13 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import HeaderMain from './components/HeaderMain';
 import ChildSection from './components/ChildSection'
-import HandSection from './components/HandSection';
 import HairSection from './components/HairSection';
 import BodySection from './components/BodySection';
 import SkinSection from './components/SkinSection';
 import MensSection from './components/MensSection';
 import MainPageSection from './components/MainPageSection';
-import BoxesSection from './components/BoxPageSection'
 import LikedProductsSection from './components/LikeProductsSection';
 
 function App() {
@@ -20,11 +18,9 @@ function App() {
         <Route path="/" element={<HeaderMain />} />
         <Route path="/child" element={<ChildSection />} />
         <Route path="/mens" element={<MensSection />} />
-        <Route path="/hand" element={<HandSection />} />
         <Route path="/hair" element={<HairSection />} />
         <Route path="/body" element={<BodySection />} />
         <Route path="/skin" element={<SkinSection />} />
-        <Route path="/box" element={<BoxesSection />} />
         <Route path="/main" element={<MainPageSection />} />
         <Route path="/liked" element={<LikedProductsSection />} />
       </Routes>

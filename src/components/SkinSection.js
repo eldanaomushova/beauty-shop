@@ -23,6 +23,8 @@ const SkinSection = () => {
 
     return (
         <div className='products-container'>
+            {/* <HeaderMain/>
+            <NavigationMain/> */}
             {Skin.map((record) => (
                 <div className='box' key={record.id}>
                     <img src={require(`../images/for_skin/${record.image}.jpg`)} alt={record.name} />

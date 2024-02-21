@@ -23,6 +23,8 @@ const BodySection = () => {
 
     return (
         <div className='products-container'>
+            {/* <HeaderMain/>
+            <NavigationMain/> */}
             {Body.map((record) => (
                 <div className='box' key={record.id}>
                     <img src={require(`../images/for_body/${record.image}.jpg`)} alt={record.name} />

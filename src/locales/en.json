@@ -1,11 +1,8 @@
 {
     "id": 1,
-    "hello": "Hello",
-    "welcome": "Welcome to the cite",
     "conditions": "Conditions",
     "shippingStart": "Free shipping is available for ",
     "boldText": "orders above $122 ",
     "shippingEnd": " (this value may vary according to exchange rates) and a full parcel weight of less than 5kg, which includes products and any shipping materials such as filling, protection, and cardboard boxes.",
-    "close":"Close",
     "see conditions":"see conditions"
 }

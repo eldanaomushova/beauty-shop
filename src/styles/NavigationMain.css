@@ -5,18 +5,18 @@
     margin-top: 0.7rem;
 }
 
-.navbar Link {
+.navbar a {
     list-style-type: none;
     padding: 0.8rem 7rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem; 
     font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-bottom: 1px solid transparent; 
+    text-decoration: none; 
+    border-bottom: 1px solid transparent;
     box-sizing: border-box;
 }
 
-.navbar Link:hover {
+.navbar a:hover {
     border-bottom: 1px solid rgb(164, 164, 164);
     color: rgb(86, 86, 149);
 }
-

@@ -2,18 +2,16 @@
     margin: 0;
     padding: 0;
 }
-
 .header-container {
     width: 200vw;
     display: inline;
     align-items: center;
 }
-
 #logo{
     width: 15vw;    
 }
 .search{
-    width: 60vw;
+    width: 58vw;
     height: 2.4rem;
     border-radius: 0 20px 20px 0;
     border: 1px solid #b8b8b8;
@@ -65,4 +63,25 @@
     color: #007bff; 
 }
 
+.header-container {
+    position: relative;
+}
 
+.search-results-container {
+    position: absolute;
+    top: 3.7rem;
+    left: 37.7rem;
+    transform: translateX(-50%);
+    width: calc(40vw + 6rem);
+    background-color: #ffffffe8;
+    border: 1px solid #ccc;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 999;
+    overflow-y: auto; 
+}
+
+.search-result {
+    margin-bottom: 10px;
+}

@@ -23,6 +23,8 @@ const MensSection = () => {
 
     return (
         <div className='products-container'>
+            {/* <HeaderMain/>
+            <NavigationMain/> */}
             {Man.map((record) => (
                 <div className='box' key={record.id}>
                     <img src={require(`../images/for_man/${record.image}.jpg`)} alt={record.name} />

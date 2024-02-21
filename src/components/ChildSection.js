@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Children } from '../data/Children';
 import '../styles/BlockOfProduct.css';
+import HeaderMain from './HeaderMain';
+import NavigationMain from './NavigationMain';
 
 const ChildSection = () => {
     const [likedProducts, setLikedProducts] = useState([]);
@@ -23,6 +25,8 @@ const ChildSection = () => {
 
     return (
         <div className='products-container'>
+            {/* <HeaderMain/>
+            <NavigationMain/> */}
             {Children.map((record) => (
                 <div className='box' key={record.id}>
                     <img src={require(`../images/for children/${record.image}.jpg`)} alt={record.name} />
