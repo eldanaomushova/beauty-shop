@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.products-container {
+    width: 200vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 20px;
+}
+.section-header{
+    margin: 20px;
+    font-size: 2.4rem;
+    text-align: center;
+    color: rgb(77, 77, 77);
+}
+

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Skin } from '../data/Skin';
 import '../styles/BlockOfProduct.css';
-
+import NavigationMain from './NavigationMain';
+import '../styles/HeaderMain.css';
+import '../styles/BlockOfProduct.css';
+import SearchSection from './SearchSection';
+import LanguageSwitcher from './LanguageSwitcher';
+import Footer from './Footer';
+import '../styles/ChildSection.css';
 const SkinSection = () => {
     const [likedProducts, setLikedProducts] = useState([]);
     useEffect(() => {
@@ -22,9 +28,12 @@ const SkinSection = () => {
     };
 
     return (
-        <div className='products-container'>
-            {/* <HeaderMain/>
-            <NavigationMain/> */}
+        <div>
+            <LanguageSwitcher />
+            <SearchSection/>
+            <NavigationMain/>
+            <p className='section-header'>SKIN SECTION</p>
+            <div className='products-container'>
             {Skin.map((record) => (
                 <div className='box' key={record.id}>
                     <img src={require(`../images/for_skin/${record.image}.jpg`)} alt={record.name} />
@@ -39,6 +48,8 @@ const SkinSection = () => {
                     </div>
                 </div>
             ))}
+        </div>
+        <Footer />
         </div>
     );
 };

@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Body } from '../data/Body';
 import '../styles/BlockOfProduct.css';
+import NavigationMain from './NavigationMain';
+import '../styles/HeaderMain.css';
+import '../styles/BlockOfProduct.css';
+import SearchSection from './SearchSection';
+import LanguageSwitcher from './LanguageSwitcher';
+import Footer from './Footer';
+import '../styles/ChildSection.css';
 
 const BodySection = () => {
     const [likedProducts, setLikedProducts] = useState([]);
@@ -22,9 +29,12 @@ const BodySection = () => {
     };
 
     return (
+        <div>
+        <LanguageSwitcher />
+        <SearchSection/>
+        <NavigationMain/>
+        <p className='section-header'>BODY SECTION</p>
         <div className='products-container'>
-            {/* <HeaderMain/>
-            <NavigationMain/> */}
             {Body.map((record) => (
                 <div className='box' key={record.id}>
                     <img src={require(`../images/for_body/${record.image}.jpg`)} alt={record.name} />
@@ -39,6 +49,8 @@ const BodySection = () => {
                     </div>
                 </div>
             ))}
+        </div>
+        <Footer />
         </div>
     );
 };

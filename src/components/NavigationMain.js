@@ -7,10 +7,10 @@ const NavigationMain = () => {
         <div className='navigation-container'>
             <nav className='navbar'>
                 <Link to="/child">CHILD</Link>
-                <Link to="/child">MENS</Link>
-                <Link to="/child">HAND</Link>
-                <Link to="/child">HAIR</Link>
-                <Link to="/child">BODY</Link>
+                <Link to="/mens">MENS</Link>
+                <Link to="/skin">HAND</Link>
+                <Link to="/hair">HAIR</Link>
+                <Link to="/body">BODY</Link>
             </nav>
         </div>
     )

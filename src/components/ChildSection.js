@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Children } from '../data/Children';
 import '../styles/BlockOfProduct.css';
-import HeaderMain from './HeaderMain';
 import NavigationMain from './NavigationMain';
+import '../styles/HeaderMain.css';
+import '../styles/BlockOfProduct.css';
+import SearchSection from './SearchSection';
+import LanguageSwitcher from './LanguageSwitcher';
+import Footer from './Footer';
+import '../styles/ChildSection.css';
 
 const ChildSection = () => {
     const [likedProducts, setLikedProducts] = useState([]);
@@ -24,23 +29,28 @@ const ChildSection = () => {
     };
 
     return (
-        <div className='products-container'>
-            {/* <HeaderMain/>
-            <NavigationMain/> */}
-            {Children.map((record) => (
-                <div className='box' key={record.id}>
-                    <img src={require(`../images/for children/${record.image}.jpg`)} alt={record.name} />
-                    <p>{record.price} $</p>
-                    <h2>{record.image}</h2>
-                    <div className="button-container"> 
-                        <button>Buy Now</button>
-                        <span
-                            className={`mdi ${likedProducts.includes(record.id) ? 'mdi-heart' : 'mdi-heart-outline'} ${likedProducts.includes(record.id) ? 'liked' : ''}`}
-                            onClick={() => toggleLiked(record.id)}
-                        ></span>
+        <div>
+            <LanguageSwitcher />
+            <SearchSection/>
+            <NavigationMain/>
+            <p className='section-header'>CHILD SECTION</p>
+            <div className='products-container'>
+                {Children.map((record) => (
+                    <div className='box' key={record.id}>
+                        <img src={require(`../images/for children/${record.image}.jpg`)} alt={record.name} />
+                        <p>{record.price} $</p>
+                        <h2>{record.image}</h2>
+                        <div className="button-container"> 
+                            <button>Buy Now</button>
+                            <span
+                                className={`mdi ${likedProducts.includes(record.id) ? 'mdi-heart' : 'mdi-heart-outline'} ${likedProducts.includes(record.id) ? 'liked' : ''}`}
+                                onClick={() => toggleLiked(record.id)}
+                            ></span>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
+            <Footer />
         </div>
     );
 };

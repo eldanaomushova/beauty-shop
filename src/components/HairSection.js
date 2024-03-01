@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Hair } from '../data/Hair';
 import '../styles/BlockOfProduct.css';
+import NavigationMain from './NavigationMain';
+import '../styles/HeaderMain.css';
+import '../styles/BlockOfProduct.css';
+import SearchSection from './SearchSection';
+import LanguageSwitcher from './LanguageSwitcher';
+import Footer from './Footer';
+import '../styles/ChildSection.css';
 
 const HairSection = () => {
     const [likedProducts, setLikedProducts] = useState([]);
@@ -22,9 +29,12 @@ const HairSection = () => {
     };
 
     return (
-        <div className='products-container'>
-            {/* <HeaderMain/>
-            <NavigationMain/> */}
+        <div>
+            <LanguageSwitcher />
+            <SearchSection/>
+            <NavigationMain/>
+            <p className='section-header'>HAIR SECTION</p>
+            <div className='products-container'>
             {Hair.map((record) => (
                 <div className='box' key={record.id}>
                     <img src={require(`../images/for hair/${record.image}.jpg`)} alt={record.name} />
@@ -39,6 +49,8 @@ const HairSection = () => {
                     </div>
                 </div>
             ))}
+        </div>
+        <Footer />
         </div>
     );
 };
