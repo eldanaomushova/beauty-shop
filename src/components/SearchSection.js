@@ -75,7 +75,10 @@ function SearchSection (productsData) {
                     <Link to='/basketProducts'>
                         <span className='mdi mdi-basket'></span>
                     </Link>
-                    <span className='mdi mdi-account'></span>
+                    <Link to='/login'>
+                        <span className='mdi mdi-account'></span>
+                    </Link>
+                    
                 </div>
             </div>
             {searchResults.length > 0 && (
