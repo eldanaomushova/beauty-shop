@@ -14,12 +14,10 @@ import logo1 from '../images/logo/logo1.png'
 const Footer = () => {
     const images = [im1, im2, im3, im4, im5, im6, im7, im8, im9];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImageIndex(prevIndex => (prevIndex + 1) % (images.length * 2));
         }, 2000); 
-
         return () => clearInterval(interval); 
     }, [images.length]);
 
@@ -43,10 +41,10 @@ const Footer = () => {
                 <div className='footer'>
                     <div className='socials'>
                         <p>Follow us on social media</p>
-                        <span className='mdi mdi-instagram'></span>
-                        <span className='mdi mdi-facebook'></span>
-                        <span className='mdi mdi-twitter'></span>
-                        <span className='mdi mdi-youtube'></span>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><span className='mdi mdi-instagram'></span></a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><span className='mdi mdi-facebook'></span></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><span className='mdi mdi-twitter'></span></a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><span className='mdi mdi-youtube'></span></a>
                     </div>
                     <div className='info'>
                         <p>E-mail</p>

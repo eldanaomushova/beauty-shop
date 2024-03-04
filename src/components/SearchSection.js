@@ -48,7 +48,10 @@ function SearchSection (productsData) {
     return (
         <div>
             <div className='header-block'>
-                <img id='logo' src={logo} alt='Logo' />
+                <Link  to='/'>
+                    <img id='logo' src={logo} alt='Logo'/>
+                </Link>
+                
                 <input
                     id='search'
                     type='text'
@@ -69,7 +72,9 @@ function SearchSection (productsData) {
                     <Link to='/liked'>
                         <span className='mdi mdi-heart-outline'></span>
                     </Link>
-                    <span className='mdi mdi-basket'></span>
+                    <Link to='/basketProducts'>
+                        <span className='mdi mdi-basket'></span>
+                    </Link>
                     <span className='mdi mdi-account'></span>
                 </div>
             </div>
