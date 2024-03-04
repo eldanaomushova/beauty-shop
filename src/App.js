@@ -9,6 +9,7 @@ import SkinSection from './components/SkinSection';
 import MensSection from './components/MensSection';
 import MainPageSection from './components/MainPageSection';
 import LikedProductsSection from './components/LikeProductsSection';
+import Basket from './components/Basket';
 
 function App() {
   const { t } = useTranslation();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/skin" element={<SkinSection />} />
         <Route path="/main" element={<MainPageSection />} />
         <Route path="/liked" element={<LikedProductsSection />} />
+        <Route path="/basketProducts" element={<Basket />} />
       </Routes>
     </Router>
   );

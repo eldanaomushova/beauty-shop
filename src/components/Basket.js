@@ -14,81 +14,94 @@ import SearchSection from './SearchSection';
 import LanguageSwitcher from './LanguageSwitcher';
 import Footer from './Footer';
 import '../styles/ChildSection.css';
-const LikedPage = () => {
-    const [likedProducts, setLikedProducts] = useState([]);
+const Basket = () => {
+    const [basketProducts, setbasketProducts] = useState([]);
     useEffect(() => {
-        const likedProductsFromStorage = JSON.parse(localStorage.getItem('likedProducts')) || [];
-        setLikedProducts(likedProductsFromStorage);
+        const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
+        setbasketProducts(basketProductsFromStorage);
     }, []);
+    const handlebuy = () =>{
+    }
+    const handleDelete = (id) =>{
+        const updatedBasket = basketProducts.filter(productId => productId !== id);
+        setbasketProducts(updatedBasket);
+        localStorage.setItem('basketProducts', JSON.stringify(updatedBasket));
+    }
 
     return (
         <div>
             <LanguageSwitcher />
             <SearchSection/>
             <NavigationMain/>
-            <p className='section-header'>LIKED PRODUCTS</p>
+            <p className='section-header'>Basket</p>
             <div className='liked-products-container'>
-            {likedProducts.length === 0 ? (
-                <p>No liked products yet.</p>
+            {basketProducts.length === 0 ? (
+                <p>No products in basket</p>
             ) : (
                 <div className='liked-products'>
-                    {Boxes.filter(record => likedProducts.includes(record.id)).map(record => (
+                    {Boxes.filter(record => basketProducts.includes(record.id)).map(record => (
                         <div className='box' key={record.id}>
                             <img src={require(`../images/boxes/${record.image}.jpg`)}  />
                             <p>{record.price} $</p>
                             <h2>{record.image}</h2>
                             <div className="button-container"> 
-                                <button>Buy Now</button>
+                                <button onClick={() => handlebuy(record.id)}>Buy Now</button>
+                                <button className='delete-from-basket' onClick={() => handleDelete(record.id)}>delete</button>
                             </div>
                         </div>
                     ))}
-                    {Body.filter(record => likedProducts.includes(record.id)).map(record => (
+                    {Body.filter(record => basketProducts.includes(record.id)).map(record => (
                         <div className='box' key={record.id}>
                             <img src={require(`../images/for_body/${record.image}.jpg`)}  />
                             <p>{record.price} $</p>
                             <h2>{record.image}</h2>
                             <div className="button-container"> 
                                 <button>Buy Now</button>
+                                <button className='delete-from-basket' onClick={() => handleDelete(record.id)}>delete</button>
                             </div>
                         </div>
                     ))}
-                    {Children.filter(record => likedProducts.includes(record.id)).map(record => (
+                    {Children.filter(record => basketProducts.includes(record.id)).map(record => (
                         <div className='box' key={record.id}>
                             <img src={require(`../images/for children/${record.image}.jpg`)}  />
                             <p>{record.price} $</p>
                             <h2>{record.image}</h2>
                             <div className="button-container"> 
                                 <button>Buy Now</button>
+                                <button className='delete-from-basket' onClick={() => handleDelete(record.id)}>delete</button>
                             </div>
                         </div>
                     ))}
-                    {Hair.filter(record => likedProducts.includes(record.id)).map(record => (
+                    {Hair.filter(record => basketProducts.includes(record.id)).map(record => (
                         <div className='box' key={record.id}>
                             <img src={require(`../images/for hair/${record.image}.jpg`)}  />
                             <p>{record.price} $</p>
                             <h2>{record.image}</h2>
                             <div className="button-container"> 
                                 <button>Buy Now</button>
+                                <button className='delete-from-basket' onClick={() => handleDelete(record.id)}>delete</button>
                             </div>
                         </div>
                     ))}
-                    {Man.filter(record => likedProducts.includes(record.id)).map(record => (
+                    {Man.filter(record => basketProducts.includes(record.id)).map(record => (
                         <div className='box' key={record.id}>
                             <img src={require(`../images/for_man/${record.image}.jpg`)}  />
                             <p>{record.price} $</p>
                             <h2>{record.image}</h2>
                             <div className="button-container"> 
                                 <button>Buy Now</button>
+                                <button className='delete-from-basket' onClick={() => handleDelete(record.id)}>delete</button>
                             </div>
                         </div>
                     ))}
-                    {Skin.filter(record => likedProducts.includes(record.id)).map(record => (
+                    {Skin.filter(record => basketProducts.includes(record.id)).map(record => (
                         <div className='box' key={record.id}>
                             <img src={require(`../images/for_skin/${record.image}.jpg`)}  />
                             <p>{record.price} $</p>
                             <h2>{record.image}</h2>
                             <div className="button-container"> 
                                 <button>Buy Now</button>
+                                <button className='delete-from-basket' onClick={() => handleDelete(record.id)}>delete</button>
                             </div>
                         </div>
                     ))}
@@ -100,4 +113,4 @@ const LikedPage = () => {
     );
 };
 
-export default LikedPage;
+export default Basket;

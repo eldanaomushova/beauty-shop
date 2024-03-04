@@ -10,14 +10,19 @@ import Footer from './Footer';
 import '../styles/ChildSection.css';
 const SkinSection = () => {
     const [likedProducts, setLikedProducts] = useState([]);
+    const [basketProducts, setBasketProducts] = useState([]);
+    
     useEffect(() => {
         const likedProductsFromStorage = JSON.parse(localStorage.getItem('likedProducts')) || [];
         setLikedProducts(likedProductsFromStorage);
+        const basketProductsFromStorage = JSON.parse(localStorage.getItem('basketProducts')) || [];
+        setBasketProducts(basketProductsFromStorage);
     }, []);
 
     useEffect(() => {
         localStorage.setItem('likedProducts', JSON.stringify(likedProducts));
-    }, [likedProducts]);
+        localStorage.setItem('basketProducts', JSON.stringify(basketProducts));
+    }, [likedProducts, basketProducts]);
 
     const toggleLiked = (id) => {
         if (likedProducts.includes(id)) {
@@ -26,6 +31,13 @@ const SkinSection = () => {
             setLikedProducts([...likedProducts, id]);
         }
     };
+    const toggleBasket = (id) =>{
+        if(basketProducts.includes(id)){
+            setBasketProducts(likedProducts.filter(productId =>productId !== id ));
+        }else{
+            setBasketProducts([...basketProducts, id]);
+        }
+    }
 
     return (
         <div>
@@ -40,8 +52,9 @@ const SkinSection = () => {
                     <p>{record.price} $</p>
                     <h2>{record.image}</h2>
                     <div className="button-container"> 
-                        <button>Buy Now</button>
-                        <span
+                    <span 
+                            className={`mdi ${basketProducts.includes(record.id) ? 'mdi-basket' : 'mdi-basket-outline'} ${likedProducts.includes(record.id) ? 'basket' : ''}`}
+                            onClick={() => toggleBasket(record.id)}></span>                        <span
                             className={`mdi ${likedProducts.includes(record.id) ? 'mdi-heart' : 'mdi-heart-outline'} ${likedProducts.includes(record.id) ? 'liked' : ''}`}
                             onClick={() => toggleLiked(record.id)}
                         ></span>
